@@ -13,12 +13,12 @@
 var rain_logs = new(require("rain_logs"))("打印的日志文件路径", true, true);
 ~~~
 
-2. 使用对象的方法,  在代码的任何地方进行不同级别的日志记录
+2. 使用对象的方法,  进行不同级别的日志记录
 
 ~~~js
 rain_logs.logs("logs String", "DEBUG");    // 可以自定义, 日志级别, 不传第二个参数, 默认没有级别
 
-// 也可以使用实现设定好的日志级别, 进行日志记录
+// 你还可以使用内部方法, 进行日志记录
 rain_logs.logs_INFO("logs String");
 rain_logs.logs_DEBUG("logs String");
 rain_logs.logs_ALL("logs String");

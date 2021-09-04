@@ -1,36 +1,23 @@
-# rain_logs
+### rain_logs presentation
 
-#### Description
-小型的日志工具!
+This is a neat little journaling tool
 
-#### Software Architecture
-Software architecture description
-
-#### Installation
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### Instructions
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### Contribution
-
-1.  Fork the repository
-2.  Create Feat_xxx branch
-3.  Commit your code
-4.  Create Pull Request
-
-
-#### Gitee Feature
-
-1.  You can use Readme\_XXX.md to support different languages, such as Readme\_en.md, Readme\_zh.md
-2.  Gitee blog [blog.gitee.com](https://blog.gitee.com)
-3.  Explore open source project [https://gitee.com/explore](https://gitee.com/explore)
-4.  The most valuable open source project [GVP](https://gitee.com/gvp)
-5.  The manual of Gitee [https://gitee.com/help](https://gitee.com/help)
-6.  The most popular members  [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+## Use method:
+1. Import, create, and initialize objects
+Parameter 1: Set the log file generation path <br />
+Parameter 2: Boolean type: whether to generates log files. Default: false <br />
+Parameter 3: Boolean Type: whether to print to the console. Default: true
+~~~js
+Var rain_logs = new(require("rain_logs"))(" print log file path ", true, true);
+~~~
+2. Use object methods for different levels of logging
+~~~js
+Logs rain_logs. Logs (" String ", "DEBUG"); // Can be customized, log level, do not pass the second parameter, default no level
+// You can also use internal methods for logging
+rain_logs.logs_INFO("logs String");
+rain_logs.logs_DEBUG("logs String");
+rain_logs.logs_ALL("logs String");
+rain_logs.logs_TRACE("logs String");
+rain_logs.logs_WARN("logs String");
+rain_logs.logs_ERROR("logs String");
+~ ~ ~
