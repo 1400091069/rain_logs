@@ -1,0 +1,17 @@
+{
+  "name": "rain_logs",
+  "version": "1.0.3",
+  "description": "小型的日志工具!",
+  "main": "log.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["rain_logs小型日志工具"],
+  "author": "Rain琴雨",
+  "license": "ISC",
+  "homepage": "https://gitee.com/rain-ky/rain_logs",
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/rain-ky/rain_logs"
+  }
+}
