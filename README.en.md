@@ -3,13 +3,15 @@
 This is a neat little journaling tool
 
 ## Use method:
-1. Import, create, and initialize objects
+1. Import, create, and initialize objects <br />
 Parameter 1: Set the log file generation path <br />
 Parameter 2: Boolean type: whether to generates log files. Default: false <br />
 Parameter 3: Boolean Type: whether to print to the console. Default: true
+
 ~~~js
 Var rain_logs = new(require("rain_logs"))(" print log file path ", true, true);
 ~~~
+
 2. Use object methods for different levels of logging
 ~~~js
 Logs rain_logs. Logs (" String ", "DEBUG"); // Can be customized, log level, do not pass the second parameter, default no level
