@@ -7,42 +7,53 @@ class logObject {
         this._isConsole = isConsole ? true : false;
     }
 
-    logs(str, rank = "") {
-        this._logs_Utils(str, rank);
+    setIsConsole(isConsole) {
+        this._isConsole = isConsole;
+    }
+
+    setIsFile(isFile) {
+        this._isFile = isFile;
+    }
+
+    logs(str, rank, sty) {
+        if (!rank) {
+            this.logs_ERROR("未定义日志的级别");
+            return;
+        }
+        this._logs_Utils(str, rank, sty);
     }
 
     logs_ALL(str) {
-        this._logs_Utils(str, "ALL");
+        this._logs_Utils(str, "ALL", "color: white; background-color: rgb(139, 38, 255)");
     }
 
     logs_TRACE(str) {
-        this._logs_Utils(str, "TRACE");
+        this._logs_Utils(str, "TRACE", "color: white; background-color: rgb(38, 96, 255);");
     }
 
     logs_DEBUG(str) {
-        let string = `DEBUG ${new Date().toLocaleString()}    ${str}\r\n`;
-        this._logs_Utils(str, "DEBUG");
+        this._logs_Utils(str, "DEBUG", "color: white; background-color: rgb(255, 154, 38);");
     }
 
     logs_INFO(str) {
-        this._logs_Utils(str, "INFO");
+        this._logs_Utils(str, "INFO", "color: white; background-color: rgb(157, 255, 66);");
     }
 
     logs_WARN(str) {
-        this._logs_Utils(str, "WARN");
+        this._logs_Utils(str, "WARN", "color: rgb(156, 156, 156); background-color: rgb(255, 252, 66);");
     }
 
     logs_ERROR(str) {
-        this._logs_Utils(str, "ERROR");
+        this._logs_Utils(str, "ERROR", "color: white; background-color: red;");
     }
 
-    _logs_Utils(str, rank, _logUrl = this._logUrl) {
+    _logs_Utils(str, rank, sty, _logUrl = this._logUrl) {
         if (!_logUrl) {
             throw "没有此文件路径!";
         }
-        let string = `${rank}  ${new Date().toLocaleString()}    ${str}\r\n`;
+        let string = `${rank}  ${new Date().toLocaleString()}  ${module.parent.filename}   ${str}\r\n`;
         if (this._isConsole) {
-            console.log(string);
+            console.log(`%c${string}`, `border-radius: 10px; padding: 10px; ${sty}`);
         }
         if (this._isFile) {
             fs.writeFile(
