@@ -1,10 +1,11 @@
 var fs = require("fs");
 
 class logObject {
-    constructor(logUrl, isFile = false, isConsole = true) {
+    constructor(logUrl, isFile = false, isConsole = true, isConsoleStyle = false) {
         this._logUrl = logUrl;
         this._isFile = isFile ? true : false;
         this._isConsole = isConsole ? true : false;
+        this._isConsoleStyle = isConsoleStyle ? true : false;
     }
 
     setIsConsole(isConsole) {
@@ -53,7 +54,11 @@ class logObject {
         }
         let string = `${rank}  ${new Date().toLocaleString()}  ${module.parent.filename}   ${str}\r\n`;
         if (this._isConsole) {
-            console.log(`%c${string}`, `border-radius: 10px; padding: 10px; ${sty}`);
+            if (this._isConsoleStyle) {
+                console.log(`%c${string}`, `border-radius: 10px; padding: 10px; ${sty}`);
+            } else {
+                console.log(string);
+            }
         }
         if (this._isFile) {
             fs.writeFile(

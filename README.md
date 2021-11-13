@@ -8,9 +8,10 @@
 参数一: 设置日志文件生成的路径 <br/>
 参数一: boolean 类型: 是否生成日志文件, 默认 false <br/>
 参数三: boolean 类型 : 是否打印到控制台, 默认 true
+参数四: 是否打印彩色日志 (注意: 此设置只在浏览器才能生效)
 
 ~~~js
-var rain_logs = new(require("rain_logs"))("打印的日志文件路径", true, true);
+var rain_logs = new(require("rain_logs"))("打印的日志文件路径", true, true, false);
 ~~~
 
 2. 使用对象的方法,  进行不同级别的日志记录
