@@ -1,6 +1,6 @@
 {
   "name": "rain_logs",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "小型的日志工具!",
   "main": "log.js",
   "scripts": {
@@ -15,5 +15,8 @@
   "repository": {
     "type": "git",
     "url": "https://gitee.com/rain-ky/rain_logs"
+  },
+  "engines": {
+    "node": "14.17.0"
   }
 }
