@@ -32,27 +32,27 @@ class logObject {
         this._logs_Utils(str, rank, sty);
     }
 
-    logs_ALL(str) {
-        this._logs_Utils(str, "ALL", "color: white; background-color: rgb(139, 38, 255)");
+    logs_ALL(...str) {
+        this._logs_Utils(str, "ALL", "color: black; background-color: rgb(139, 38, 255)");
     }
 
-    logs_TRACE(str) {
-        this._logs_Utils(str, "TRACE", "color: white; background-color: rgb(38, 96, 255);");
+    logs_TRACE(...str) {
+        this._logs_Utils(str, "TRACE", "color: black; background-color: rgb(38, 96, 255);");
     }
 
-    logs_DEBUG(str) {
-        this._logs_Utils(str, "DEBUG", "color: white; background-color: rgb(255, 154, 38);");
+    logs_DEBUG(...str) {
+        this._logs_Utils(str, "DEBUG", "color: black; background-color: rgb(255, 154, 38);");
     }
 
-    logs_INFO(str) {
-        this._logs_Utils(str, "INFO", "color: white; background-color: rgb(157, 255, 66);");
+    logs_INFO(...str) {
+        this._logs_Utils(str, "INFO", "color: black; background-color: rgb(157, 255, 66);");
     }
 
-    logs_WARN(str) {
-        this._logs_Utils(str, "WARN", "color: rgb(156, 156, 156); background-color: rgb(255, 252, 66);");
+    logs_WARN(...str) {
+        this._logs_Utils(str, "WARN", "color: black; background-color: rgb(255, 252, 66);");
     }
 
-    logs_ERROR(str) {
+    logs_ERROR(...str) {
         this._logs_Utils(str, "ERROR", "color: white; background-color: red;");
     }
 
@@ -60,12 +60,12 @@ class logObject {
         if (!_logUrl) {
             throw "没有此文件路径!";
         }
-        let string = `${rank}  ${new Date().toLocaleString()}   ${str}\r\n`;
+        let string = `${rank}  ${new Date().toLocaleString()}`;
         if (this._isConsole) {
             if (this._isConsoleStyle) {
-                console.log(`%c${string}`, `border-radius: 10px; padding: 10px; ${sty}`);
+                console.log(`%c${string} ${str}`, `border-radius: 10px; padding: 10px; ${sty}`);
             } else {
-                console.log(string);
+                console.log(string, ...str);
             }
         }
         if (this._isFile) {
