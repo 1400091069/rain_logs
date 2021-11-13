@@ -12,6 +12,10 @@
 
 ~~~js
 var rain_logs = new(require("rain_logs"))("打印的日志文件路径", true, true, false);
+rain_logs.setIsConsole(true) // 设置是否 控制台打印, 默认值: true
+rain_logs.setIsFile(true) // 设置是否 生成日志文件, 默认值: false
+rain_logs.setIsConsoleStyle(true) // 设置是否 显示控制台日志的样式, 一般只在浏览器的控制台中生效, 默认值: false
+rain_logs.setLogUrl(true) // 设置日志文件的生成位置(路径), 默认值: __dirname
 ~~~
 
 2. 使用对象的方法,  进行不同级别的日志记录

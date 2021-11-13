@@ -1,7 +1,7 @@
 var fs = require("fs");
 
 class logObject {
-    constructor(logUrl, isFile = false, isConsole = true, isConsoleStyle = false) {
+    constructor(logUrl = __dirname, isFile = false, isConsole = true, isConsoleStyle = false) {
         this._logUrl = logUrl;
         this._isFile = isFile ? true : false;
         this._isConsole = isConsole ? true : false;
@@ -14,6 +14,14 @@ class logObject {
 
     setIsFile(isFile) {
         this._isFile = isFile;
+    }
+
+    setIsConsoleStyle(isConsoleStyle) {
+        this._isConsoleStyle = isConsoleStyle;
+    }
+
+    setLogUrl(logUrl) {
+        this._logUrl = logUrl;
     }
 
     logs(str, rank, sty) {
@@ -52,7 +60,7 @@ class logObject {
         if (!_logUrl) {
             throw "没有此文件路径!";
         }
-        let string = `${rank}  ${new Date().toLocaleString()}  ${module.parent.filename}   ${str}\r\n`;
+        let string = `${rank}  ${new Date().toLocaleString()}   ${str}\r\n`;
         if (this._isConsole) {
             if (this._isConsoleStyle) {
                 console.log(`%c${string}`, `border-radius: 10px; padding: 10px; ${sty}`);
