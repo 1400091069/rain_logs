@@ -63,7 +63,7 @@ class logObject {
         let string = `${rank}  ${new Date().toLocaleString()}`;
         if (this._isConsole) {
             if (this._isConsoleStyle) {
-                console.log(`%c${string} ${str}`, `border-radius: 10px; padding: 10px; ${sty}`);
+                console.log(`%c${string} ${str.join("")}`, `border-radius: 10px; padding: 10px; ${sty}`);
             } else {
                 console.log(string, ...str);
             }
