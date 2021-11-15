@@ -17,6 +17,7 @@
     "url": "https://gitee.com/rain-ky/rain_logs"
   },
   "engines": {
-    "node": "14.17.0"
+    "node": "14.17.0",
+    "vscode": "~1.62.32"
   }
 }
