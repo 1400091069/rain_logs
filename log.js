@@ -44,10 +44,7 @@ class logObject {
         this._logs_Utils(str, "ERROR", "color: white; background-color: red;");
     }
 
-    _logs_Utils(str, rank, sty, _logUrl = this._logUrl) {
-        if (!_logUrl) {
-            throw "没有此文件路径!";
-        }
+    _logs_Utils(str, rank, sty) {
         let string = `${rank}  ${new Date().toLocaleString()}`;
         if (this._isConsole) {
             if (this._isConsoleStyle) {
