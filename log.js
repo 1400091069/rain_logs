@@ -1,9 +1,5 @@
-var fs = require("fs");
-
 class logObject {
-    constructor(logUrl = __dirname, isFile = false, isConsole = true, isConsoleStyle = false) {
-        this._logUrl = logUrl;
-        this._isFile = isFile ? true : false;
+    constructor(isConsole = true, isConsoleStyle = false) {
         this._isConsole = isConsole ? true : false;
         this._isConsoleStyle = isConsoleStyle ? true : false;
     }
@@ -12,16 +8,8 @@ class logObject {
         this._isConsole = isConsole;
     }
 
-    setIsFile(isFile) {
-        this._isFile = isFile;
-    }
-
     setIsConsoleStyle(isConsoleStyle) {
         this._isConsoleStyle = isConsoleStyle;
-    }
-
-    setLogUrl(logUrl) {
-        this._logUrl = logUrl;
     }
 
     logs(str, rank, sty) {
@@ -67,19 +55,6 @@ class logObject {
             } else {
                 console.log(string, ...str);
             }
-        }
-        if (this._isFile) {
-            fs.writeFile(
-                _logUrl,
-                string,
-                {
-                    encoding: "utf-8",
-                    flag: "a",
-                },
-                (err) => {
-                    if (err) throw "日志写入文件发生错误!";
-                }
-            );
         }
     }
 }
