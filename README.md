@@ -5,17 +5,13 @@
 ### 使用方法:
 
 1. 导入并创建对象, 对象初始化 <br/>
-参数一: 设置日志文件生成的路径 <br/>
-参数一: boolean 类型: 是否生成日志文件, 默认 false <br/>
-参数三: boolean 类型 : 是否打印到控制台, 默认 true
-参数四: 是否打印彩色日志 (注意: 此设置只在浏览器才能生效)
+参数一: boolean 类型 : 是否打印到控制台, 默认 true
+参数二: 是否打印彩色日志 (注意: 此设置只在浏览器才能生效)
 
 ~~~js
-var rain_logs = new(require("rain_logs"))("打印的日志文件路径", true, true, false);
+var rain_logs = new(require("rain_logs"))();
 rain_logs.setIsConsole(true) // 设置是否 控制台打印, 默认值: true
-rain_logs.setIsFile(true) // 设置是否 生成日志文件, 默认值: false
 rain_logs.setIsConsoleStyle(true) // 设置是否 显示控制台日志的样式, 一般只在浏览器的控制台中生效, 默认值: false
-rain_logs.setLogUrl(true) // 设置日志文件的生成位置(路径), 默认值: __dirname
 ~~~
 
 2. 使用对象的方法,  进行不同级别的日志记录
