@@ -1,3 +1,10 @@
+/**
+ * @author   作者: Rain
+ * @date 创建于 2023年 03月24日  11:07:17  星期五
+ * @file_path  文件磁盘路径: E:\repository\rain_logs\log.js
+ * @file_path  文件项目路径: log.js
+ * @description 日志类
+ */
 class logObject {
     constructor(isConsole = true, isConsoleStyle = false) {
         this._isConsole = isConsole ? true : false;
