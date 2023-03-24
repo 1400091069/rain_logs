@@ -11,7 +11,7 @@
   ],
   "author": "Rain琴雨",
   "license": "ISC",
-  "types": "./log.d.ts",
+  "types": "log.d.ts",
   "homepage": "https://gitee.com/rain-ky/rain_logs",
   "repository": {
     "type": "git",
