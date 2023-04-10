@@ -5,7 +5,7 @@
  * @file_path  文件项目路径: log.js
  * @description 日志类
  */
-class logObject {
+export default class logObject {
     constructor(isConsole = true, isConsoleStyle = false) {
         this._isConsole = isConsole ? true : false;
         this._isConsoleStyle = isConsoleStyle ? true : false;
@@ -62,5 +62,3 @@ class logObject {
         }
     }
 }
-
-module.exports = logObject;
