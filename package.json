@@ -14,10 +14,10 @@
   "author": "Rain琴雨",
   "license": "ISC",
   "types": "log.d.ts",
-  "homepage": "https://gitee.com/rain-ky/rain_logs",
+  "homepage": "https://github.com/1400091069/rain_logs",
   "repository": {
     "type": "git",
-    "url": "https://gitee.com/rain-ky/rain_logs"
+    "url": "https://github.com/1400091069/rain_logs"
   },
   "engines": {
     "node": "14.17.0",
