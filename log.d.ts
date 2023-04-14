@@ -18,11 +18,13 @@ export default class logObject {
      * @param isConsole | boolean
      */
     setIsConsole(isConsole: boolean): void;
+
     /**
      * 设置是否开启日志的样式模式, 非 PC 浏览器, 不可使用
      * @param isConsoleStyle | boolean
      */
     setIsConsoleStyle(isConsoleStyle: boolean): void;
+
     /**
      * 自定义日志级别
      * @param str 要打印的日志
@@ -35,35 +37,35 @@ export default class logObject {
      * ALL 级别的日志
      * @param str 要打印的内容
      */
-    logs_ALL(str?: string | number | object | [] | {}): void;
+    ALL(str?: string | number | object | [] | {}): void;
 
     /**
      * TRACE 级别的日志
      * @param str 要打印的内容
      */
-    logs_TRACE(str?: string | number | object | [] | {}): void;
+    TRACE(str?: string | number | object | [] | {}): void;
 
     /**
      * DEBUG 级别的日志
      * @param str 要打印的内容
      */
-    logs_DEBUG(str?: string | number | object | [] | {}): void;
+    DEBUG(str?: string | number | object | [] | {}): void;
 
     /**
      * INFO 级别的日志
      * @param str 要打印的内容
      */
-    logs_INFO(str?: string | number | object | [] | {}): void;
+    INFO(str?: string | number | object | [] | {}): void;
 
     /**
      * WARN 级别的日志
      * @param str 要打印的内容
      */
-    logs_WARN(str?: string | number | object | [] | {}): void;
+    WARN(str?: string | number | object | [] | {}): void;
 
     /**
      * ERROR 级别的日志
      * @param str 要打印的内容
      */
-    logs_ERROR(str?: string | number | object | [] | {}): void;
+    ERROR(str?: string | number | object | [] | {}): void;
 }
