@@ -20,7 +20,7 @@
     "url": "https://github.com/1400091069/rain_logs"
   },
   "engines": {
-    "node": "14.17.0",
+    "node": ">=14.17.0",
     "vscode": "~1.62.32"
   }
 }
