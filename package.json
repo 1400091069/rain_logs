@@ -14,10 +14,13 @@
   "author": "Rain琴雨",
   "license": "ISC",
   "types": "log.d.ts",
-  "homepage": "https://github.com/1400091069/rain_logs",
+  "homepage": "https://github.com/quiet-rain-ky/rain_logs",
   "repository": {
     "type": "git",
-    "url": "https://github.com/1400091069/rain_logs"
+    "url": "https://github.com/quiet-rain-ky/rain_logs"
+  },
+  "bugs": {
+    "url": "https://github.com/quiet-rain-ky/rain_logs/issues"
   },
   "engines": {
     "node": ">=14.17.0",
