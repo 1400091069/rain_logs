@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "rain_logs小型日志工具 ~"
+    "rain_logs小型日志工具"
   ],
   "author": "Rain琴雨",
   "license": "ISC",
