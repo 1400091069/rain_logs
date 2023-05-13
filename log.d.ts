@@ -29,7 +29,7 @@ export default class logObject {
      * 自定义日志类型
      * @param rank 日志级别字符, 例: 'INFO'
      * @param sty 日志在控制台的样式, 非 PC 浏览器, 不可使用
-     * @param str 要打印的日志
+     * @param str 要打印的日志内容
      */
     logs(rank: string, sty: string, str: any[]): void;
 
