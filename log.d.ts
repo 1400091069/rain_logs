@@ -26,46 +26,46 @@ export default class logObject {
     setIsConsoleStyle(isConsoleStyle: boolean): void;
 
     /**
-     * 自定义日志级别
-     * @param str 要打印的日志
+     * 自定义日志类型
      * @param rank 日志级别字符, 例: 'INFO'
      * @param sty 日志在控制台的样式, 非 PC 浏览器, 不可使用
+     * @param str 要打印的日志
      */
-    logs(str: string, rank: string, sty: string): void;
+    logs(rank: string, sty: string, str: any[]): void;
 
     /**
      * ALL 级别的日志
      * @param str 要打印的内容
      */
-    ALL(str?: string | number | object | [] | {}): void;
+    ALL(str: any[]): void;
 
     /**
      * TRACE 级别的日志
      * @param str 要打印的内容
      */
-    TRACE(str?: string | number | object | [] | {}): void;
+    TRACE(str: any[]): void;
 
     /**
      * DEBUG 级别的日志
      * @param str 要打印的内容
      */
-    DEBUG(str?: string | number | object | [] | {}): void;
+    DEBUG(str: any[]): void;
 
     /**
      * INFO 级别的日志
      * @param str 要打印的内容
      */
-    INFO(str?: string | number | object | [] | {}): void;
+    INFO(str: any[]): void;
 
     /**
      * WARN 级别的日志
      * @param str 要打印的内容
      */
-    WARN(str?: string | number | object | [] | {}): void;
+    WARN(str: any[]): void;
 
     /**
      * ERROR 级别的日志
      * @param str 要打印的内容
      */
-    ERROR(str?: string | number | object | [] | {}): void;
+    ERROR(str: any[]): void;
 }

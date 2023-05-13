@@ -19,7 +19,7 @@ export default class logObject {
         this._isConsoleStyle = isConsoleStyle;
     }
 
-    logs(str, rank, sty) {
+    logs(rank, sty, ...str) {
         if (!rank) {
             this.ERROR("未定义日志的级别");
             return;
