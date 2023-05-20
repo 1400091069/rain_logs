@@ -26,7 +26,7 @@ rain_log.setIsConsoleStyle(true); // 动态设置是否 显示控制台日志的
  * @param sty 日志在控制台的样式, 非 PC 浏览器, 不可使用, 可为 null
  * @param str 要打印的日志内容
  */
-rain_log.logs("DEBUG", "color: white; background-color: red;", "logs String"); // 可以自定义, 日志级别, 不传第一个参数, 默认没有级别
+rain_log.logs("DEBUG", "color: white; background-color: red;", "logs String");
 
 // 你还可以使用内部方法, 进行日志记录
 rain_log.INFO("logs String");
