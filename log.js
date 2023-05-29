@@ -19,8 +19,12 @@ export default class logObject {
         this._isConsoleStyle = isConsoleStyle;
     }
 
-    logs_logo(version, url, bgColor) {
-        console.log(`%crbj v${version}`, `color: white; background-color: ${bgColor}; padding:3px 10px; margin: 10px;`, url);
+    version_logs(version, url, bgColor = "#3c9cff") {
+        if (version) {
+            console.log(`%crbj v${version}`, `color: white; background-color: ${bgColor}; padding:3px 10px; margin: 10px;`, url);
+        } else {
+            this.ERROR("未传入版本参数");
+        }
     }
 
     logs(rank, ...str) {
