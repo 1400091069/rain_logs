@@ -19,43 +19,43 @@ export default class logObject {
         this._isConsoleStyle = isConsoleStyle;
     }
 
-    logs(rank, sty, ...str) {
+    logs(rank, ...str) {
         if (!rank) {
             this.ERROR("未定义日志的级别");
             return;
         }
-        this._logs_Utils(str, rank, sty);
+        this._logs_Utils(str, rank, "color: #000000");
     }
 
     ALL(...str) {
-        this._logs_Utils(str, "ALL", "color: black; background-color: rgb(139, 38, 255)");
+        this._logs_Utils(str, "ALL", "color: rgb(139, 38, 255);");
     }
 
     TRACE(...str) {
-        this._logs_Utils(str, "TRACE", "color: black; background-color: rgb(38, 96, 255);");
+        this._logs_Utils(str, "TRACE", "color: rgb(38, 96, 255);");
     }
 
     DEBUG(...str) {
-        this._logs_Utils(str, "DEBUG", "color: black; background-color: rgb(255, 154, 38);");
+        this._logs_Utils(str, "DEBUG", "color: rgb(255, 93, 247);");
     }
 
     INFO(...str) {
-        this._logs_Utils(str, "INFO", "color: black; background-color: rgb(157, 255, 66);");
+        this._logs_Utils(str, "INFO", "color: #909399;");
     }
 
     WARN(...str) {
-        this._logs_Utils(str, "WARN", "color: black; background-color: rgb(255, 252, 66);");
+        this._logs_Utils(str, "WARN", "color: #f29100;");
     }
 
     ERROR(...str) {
-        this._logs_Utils(str, "ERROR", "color: white; background-color: red;");
+        this._logs_Utils(str, "ERROR", "color: #fa3534;");
     }
 
     _logs_Utils(str, rank, sty) {
         let string = `${rank}  ${new Date().toLocaleString()}`;
         if (this._isConsole) {
             if (this._isConsoleStyle) {
-                console.log(`%c${string} ${str.join("")}`, `border-radius: 10px; padding: 10px; ${sty}`);
+                console.log(`%c${string} ${str.join("")}`, sty);
             } else {
                 console.log(string, ...str);
             }
