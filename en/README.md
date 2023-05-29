@@ -15,6 +15,7 @@ import logObj from "rain_logs";
 var rain_log = new logObj(true, false);
 rain_log.setIsConsole(true); // Dynamically set whether to print to the console, default value: true
 rain_log.setIsConsoleStyle(true); // Dynamically set whether to display the style of the console log, generally only effective in the browser console, default value: false
+rain_log.logs_logo("1.0.0", "https://xxx.com", "orange"); // Log printing, version identification
 ```
 
 1. Logging at different levels using object methods
@@ -23,10 +24,9 @@ rain_log.setIsConsoleStyle(true); // Dynamically set whether to display the styl
 /**
 * Custom log type
 * @param rank log level character, example: 'INFO', can be null
-* @param sty The style of the log in the console, non-PC browser, unavailable, can be null
 * @param str the log content to be printed
 */
-rain_log.logs("DEBUG", "color: white; background-color: red;", "logs String");
+rain_log.logs("DEBUG", "logs String");
 
 // You can also use internal methods for logging
 rain_log.INFO("logs String");

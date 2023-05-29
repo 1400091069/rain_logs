@@ -19,6 +19,10 @@ export default class logObject {
         this._isConsoleStyle = isConsoleStyle;
     }
 
+    logs_logo(version, url, bgColor) {
+        console.log(`%crbj v${version}`, `color: white; background-color: ${bgColor}; padding:3px 10px; margin: 10px;`, url);
+    }
+
     logs(rank, ...str) {
         if (!rank) {
             this.ERROR("未定义日志的级别");

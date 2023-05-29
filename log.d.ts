@@ -26,6 +26,14 @@ export default class logObject {
     setIsConsoleStyle(isConsoleStyle: boolean): void;
 
     /**
+     * 日志 logo 标识
+     * @param version 版本号 
+     * @param url 仓库地址路径
+     * @param bgColor 标识的背景颜色
+     */
+    logs_logo(version: string, url: string, bgColor: string): void;
+
+    /**
      * 自定义日志类型
      * @param rank 日志级别字符, 例: 'INFO'
      * @param sty 日志在控制台的样式, 非 PC 浏览器, 不可使用
