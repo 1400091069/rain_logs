@@ -63,7 +63,7 @@ export default class logObject {
         let string = `${rank}  ${new Date().toLocaleString()}`;
         if (this._isConsole) {
             if (this._isConsoleStyle) {
-                console.log(`%c${string} ${str.join("")}`, sty);
+                console.log(`%c ${string}`, sty, ...str);
             } else {
                 console.log(string, ...str);
             }

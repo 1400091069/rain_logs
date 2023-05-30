@@ -14,7 +14,7 @@ import logObj from "rain_logs";
 */
 var rain_log = new logObj(true, false);
 rain_log.setIsConsole(true); // Dynamically set whether to print to the console, default value: true
-rain_log.setIsConsoleStyle(true); // Dynamically set whether to display the style of the console log, generally only effective in the browser console, default value: false
+rain_log.setIsConsoleStyle(true); // Dynamically sets whether to display the console color log identity, generally only effective in the browser console, default value: false
 rain_log.version_logs("1.0.0", "https://xxx.com", "orange"); // Log printing, version identification
 ```
 

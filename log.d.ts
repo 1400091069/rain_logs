@@ -20,7 +20,7 @@ export default class logObject {
     setIsConsole(isConsole: boolean): void;
 
     /**
-     * 设置是否开启日志的样式模式, 非 PC 浏览器, 不可使用
+     * 设置是否开启日志的彩色标识模式, 非 PC 浏览器, 不可使用
      * @param isConsoleStyle | boolean
      */
     setIsConsoleStyle(isConsoleStyle: boolean): void;

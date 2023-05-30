@@ -14,7 +14,7 @@ import logObj from "rain_logs";
  */
 var rain_log = new logObj(true, false);
 rain_log.setIsConsole(true); // 动态设置是否 控制台打印, 默认值: true
-rain_log.setIsConsoleStyle(true); // 动态设置是否 显示控制台日志的样式, 一般只在浏览器的控制台中生效, 默认值: false
+rain_log.setIsConsoleStyle(true); // 动态设置是否 显示控制台彩色日志标识, 一般只在浏览器的控制台中生效, 默认值: false
 rain_log.version_logs("1.0.0", "https://xxx.com", "orange"); // 日志打印, 版本标识
 ~~~
 
