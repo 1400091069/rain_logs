@@ -18,7 +18,7 @@ rain_log.setIsConsoleStyle(true); // Dynamically sets whether to display the con
 rain_log.version_logs("1.0.0", "https://xxx.com", "orange"); // Log printing, version identification
 ```
 
-1. Logging at different levels using object methods
+2. Logging at different levels using object methods
 
 ```js
 /**
