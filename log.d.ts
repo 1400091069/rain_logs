@@ -8,10 +8,22 @@
 export default class logObject {
     /**
      * 日志对象初始化
-     * @param isConsole 是否开启日志打印功能
-     * @param isConsoleStyle 是否开启日志样式功能, 默认: false 不开启, 注意: 非 PC 浏览器此项不可用
+     * @param optionObj 日志初始化参数对象
      */
-    constructor(isConsole: boolean, isConsoleStyle: boolean);
+    constructor(optionObj: {
+        /**
+         * 是否开启日志打印功能
+         */
+        isConsole: boolean;
+        /**
+         * 是否开启日志样式功能, 默认: false 不开启, 注意: 非 PC 浏览器此项不可用
+         */
+        isConsoleStyle: boolean;
+        /**
+         * 是否在打印日志时, 在日志的前面添加  [ 'markStr' ] 标志
+         */
+        markStr: string;
+    });
 
     /**
      * 设置是否打印控制台

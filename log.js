@@ -6,9 +6,10 @@
  * @description 日志类
  */
 export default class logObject {
-    constructor(isConsole = true, isConsoleStyle = false) {
+    constructor({ isConsole = true, isConsoleStyle = false, markStr }) {
         this._isConsole = isConsole ? true : false;
         this._isConsoleStyle = isConsoleStyle ? true : false;
+        this._markStr = markStr;
     }
 
     setIsConsole(isConsole) {
@@ -61,6 +62,7 @@ export default class logObject {
 
     _logs_Utils(str, rank, sty) {
         let string = `${rank}  ${new Date().toLocaleString()}`;
+        if (this._markStr) string = "[" + this._markStr + "]  " + string;
         if (this._isConsole) {
             if (this._isConsoleStyle) {
                 console.log(`%c ${string}`, sty, ...str);
