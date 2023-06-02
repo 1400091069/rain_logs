@@ -61,9 +61,9 @@ export default class logObject {
     }
 
     _logs_Utils(str, rank, sty) {
-        let string = `${rank}  ${new Date().toLocaleString()}`;
-        if (this._markStr) string = "[" + this._markStr + "]  " + string;
         if (this._isConsole) {
+            let string = `${rank}  ${new Date().toLocaleString()}`;
+            if (this._markStr) string = "[" + this._markStr + "]  " + string;
             if (this._isConsoleStyle) {
                 console.log(`%c ${string}`, sty, ...str);
             } else {
