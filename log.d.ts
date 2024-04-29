@@ -51,41 +51,41 @@ export default class logObject {
      * @param sty 日志在控制台的样式, 非 PC 浏览器, 不可使用
      * @param str 要打印的日志内容
      */
-    logs(rank: string, sty: string, str: any[]): void;
+    logs(rank: string, sty: string, ...str: any): void;
 
     /**
      * ALL 级别的日志
      * @param str 要打印的内容
      */
-    ALL(str: any[]): void;
+    ALL(...str: any): void;
 
     /**
      * TRACE 级别的日志
      * @param str 要打印的内容
      */
-    TRACE(str: any[]): void;
+    TRACE(...str: any): void;
 
     /**
      * DEBUG 级别的日志
      * @param str 要打印的内容
      */
-    DEBUG(str: any[]): void;
+    DEBUG(...str: any): void;
 
     /**
      * INFO 级别的日志
      * @param str 要打印的内容
      */
-    INFO(str: any[]): void;
+    INFO(...str: any): void;
 
     /**
      * WARN 级别的日志
      * @param str 要打印的内容
      */
-    WARN(str: any[]): void;
+    WARN(...str: any): void;
 
     /**
      * ERROR 级别的日志
      * @param str 要打印的内容
      */
-    ERROR(str: any[]): void;
+    ERROR(...str: any): void;
 }
